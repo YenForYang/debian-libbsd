@@ -1,0 +1,15 @@
+Package: libbsd0-udeb
+Source: libbsd
+Version: 0.9.1-1
+Architecture: amd64
+Maintainer: Guillem Jover <guillem@debian.org>
+Installed-Size: 250
+Depends: libc6-udeb (>= 2.27)
+Section: debian-installer
+Priority: optional
+Description: utility functions from BSD systems - shared library
+ This library provides some C functions such as strlcpy() that are commonly
+ available on BSD systems but not on others like GNU systems.
+ .
+ For a detailed list of the provided functions, please see the libbsd-dev
+ package description.

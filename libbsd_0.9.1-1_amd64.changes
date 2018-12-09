@@ -1,0 +1,44 @@
+Format: 1.8
+Date: Tue, 22 May 2018 16:31:10 +0200
+Source: libbsd
+Binary: libbsd-dev libbsd0 libbsd0-udeb
+Built-For-Profiles: nobiarch nocheck
+Architecture: amd64
+Version: 0.9.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Guillem Jover <guillem@debian.org>
+Changed-By: Guillem Jover <guillem@debian.org>
+Description:
+ libbsd-dev - utility functions from BSD systems - development files
+ libbsd0    - utility functions from BSD systems - shared library
+ libbsd0-udeb - utility functions from BSD systems - shared library (udeb)
+Closes: 899282
+Changes:
+ libbsd (0.9.1-1) unstable; urgency=medium
+ .
+   * New upstream release.
+     - Fix ABI break coming from NetBSD vis/unvis module import. The OpenBSD
+       interface is now again the default, but it will emit warning, and users
+       should switch to the new NetBSD interface which will be the default in
+       0.10.0. Thanks to Sven Joachim <svenjoac@gmx.de> for the report.
+       Closes: #899282
+     - Fix COPYING file to adhere to the specified format.
+Checksums-Sha1:
+ 3abe65729edb9253cc2f436f09db2490e3f49be4 886380 libbsd-dev_0.9.1-1_amd64.deb
+ 16db45df08435dfcb9a4ad9d9b4692b04fef2291 58204 libbsd0-dbgsym_0.9.1-1_amd64.deb
+ 410d45684f27b5b332a3109a1712406fc7038f8a 70528 libbsd0-udeb_0.9.1-1_amd64.udeb
+ f9fa692e3b2df0a3003daccd4b21c5b900d2c585 132260 libbsd0_0.9.1-1_amd64.deb
+ 07b78052b4348e48dd0acf4d8b23f00132717bf9 5608 libbsd_0.9.1-1_amd64.buildinfo
+Checksums-Sha256:
+ c998de2dc499ba0c72948c78007f44d0b68fb12c9cc9b376d3ad41c024a76664 886380 libbsd-dev_0.9.1-1_amd64.deb
+ 1f842cc9c68dda9327ab24480f9f3cc5dfd591a351342783760e79f2c5e95158 58204 libbsd0-dbgsym_0.9.1-1_amd64.deb
+ 85114ad644606d873d32014352ad9f2d7283ebfd5c885c89a6cf0675578d1a76 70528 libbsd0-udeb_0.9.1-1_amd64.udeb
+ a9a0a8fb15c2239368ecdc7abb0c0128144648c74e092fb2a5a7702d25c03d63 132260 libbsd0_0.9.1-1_amd64.deb
+ 36c89961f224d301115402332dc3df25776857c85415930b89434bf690452302 5608 libbsd_0.9.1-1_amd64.buildinfo
+Files:
+ a02cc41f11eae58a8a6a610aa1c2c09b 886380 libdevel optional libbsd-dev_0.9.1-1_amd64.deb
+ a50252c4fbff81ca1589e7e3fec6d1d7 58204 debug optional libbsd0-dbgsym_0.9.1-1_amd64.deb
+ 70d5e62f4fa4951361f95b33940c9a17 70528 debian-installer optional libbsd0-udeb_0.9.1-1_amd64.udeb
+ 5805cfcf80c45879de663b8c61f93f2c 132260 libs optional libbsd0_0.9.1-1_amd64.deb
+ c3120f9d45e8905eff614ea058a84781 5608 libs optional libbsd_0.9.1-1_amd64.buildinfo

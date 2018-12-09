@@ -1,0 +1,651 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck
+dpkg-buildpackage: info: source package libbsd
+dpkg-buildpackage: info: source version 0.9.1-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Guillem Jover <guillem@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh_testdir
+dh_testroot
+[ ! -f Makefile ] || /usr/bin/make distclean
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+Making distclean in include
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+Making distclean in man
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+test -z "md5.3bsd " || rm -f md5.3bsd 
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+Making distclean in src
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+test -z "hash/md5hl.c " || rm -f hash/md5hl.c 
+test -z "" || rm -f 
+test -z "libbsd.la" || rm -f libbsd.la
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -rf hash/.libs hash/_libs
+rm -f *.o
+rm -f hash/*.o
+rm -f hash/*.lo
+rm -f *.lo
+rm -f *.tab.c
+test -z "libbsd.pc libbsd-ctor.pc libbsd-overlay.pc" || rm -f libbsd.pc libbsd-ctor.pc libbsd-overlay.pc
+test . = "." || test -z "" || rm -f 
+rm -f hash/.deps/.dirstamp
+rm -f hash/.dirstamp
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps hash/.deps
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+Making distclean in test
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+ rm -f overlay bzero closefrom endian humanize fgetln funopen fparseln fpurge md5 nlist proctitle-init progname setmode strl strmode strnstr vis vis-openbsd
+rm -rf .libs _libs
+rm -f *.o
+test -z "headers-overlay.sh.log headers-system.sh.log overlay.log bzero.log closefrom.log endian.log humanize.log fgetln.log funopen.log fparseln.log fpurge.log md5.log nlist.log proctitle-init.log progname.log setmode.log strl.log strmode.log strnstr.log vis.log vis-openbsd.log" || rm -f headers-overlay.sh.log headers-system.sh.log overlay.log bzero.log closefrom.log endian.log humanize.log fgetln.log funopen.log fparseln.log fpurge.log md5.log nlist.log proctitle-init.log progname.log setmode.log strl.log strmode.log strnstr.log vis.log vis-openbsd.log
+test -z "headers-overlay.sh.trs headers-system.sh.trs overlay.trs bzero.trs closefrom.trs endian.trs humanize.trs fgetln.trs funopen.trs fparseln.trs fpurge.trs md5.trs nlist.trs proctitle-init.trs progname.trs setmode.trs strl.trs strmode.trs strnstr.trs vis.trs vis-openbsd.trs" || rm -f headers-overlay.sh.trs headers-system.sh.trs overlay.trs bzero.trs closefrom.trs endian.trs humanize.trs fgetln.trs funopen.trs fparseln.trs fpurge.trs md5.trs nlist.trs proctitle-init.trs progname.trs setmode.trs strl.trs strmode.trs strnstr.trs vis.trs vis-openbsd.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f config.h stamp-h1
+rm -f libtool config.lt
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+dh_clean
+ debian/rules binary
+dh_testdir
+dh_update_autotools_config
+./configure \
+	CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" \
+	CFLAGS="-Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe" \
+	LDFLAGS="-Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax" \
+	--build=x86_64-linux-gnu \
+	--disable-silent-rules \
+	--prefix=/usr \
+	--libdir=\${prefix}/lib/x86_64-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for style of include used by make... GNU
+checking for gcc... icc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether icc accepts -g... yes
+checking for icc option to accept ISO C89... none needed
+checking whether icc understands -c and -o together... yes
+checking dependency style of icc... gcc3
+checking how to run the C preprocessor... icc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by icc... xild
+checking if the linker (xild) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for xild option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from icc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if icc supports -fno-rtti -fno-exceptions... yes
+checking for icc option to produce PIC... -fPIC -DPIC
+checking if icc PIC flag -fPIC -DPIC works... yes
+checking if icc static flag -static works... no
+checking if icc supports -c -o file.o... yes
+checking if icc supports -c -o file.o... (cached) yes
+checking whether the icc linker (xild -m elf_x86_64) supports shared libraries... xild: warning #10013: no objects specified for multi-file optimization
+xild: executing 'ld'
+yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) icc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking for icc option to accept ISO C89... (cached) none needed
+checking whether icc understands -c and -o together... (cached) yes
+checking dependency style of icc... (cached) gcc3
+checking whether ln -s works... yes
+checking for unif01_CreateExternGenBits in -ltestu01... no
+checking for library containing clock_gettime... none required
+checking sys/ndir.h usability... no
+checking sys/ndir.h presence... no
+checking for sys/ndir.h... no
+checking sys/dir.h usability... yes
+checking sys/dir.h presence... yes
+checking for sys/dir.h... yes
+checking ndir.h usability... no
+checking ndir.h presence... no
+checking for ndir.h... no
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking for inline... inline
+checking for typeof syntax and keyword spelling... typeof
+checking for int64_t... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for uid_t in sys/types.h... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking whether F_CLOSEM is declared... no
+checking for GNU .init_array section support... no
+checking for program_invocation_short_name... yes
+checking for __progname... yes
+checking for clearenv... yes
+checking for dirfd... yes
+checking for fopencookie... yes
+checking for __fpurge... yes
+checking for getauxval... yes
+checking for getentropy... yes
+checking for getexecname... no
+checking for getline... yes
+checking for pstat_getproc... no
+checking for sysconf... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating man/Makefile
+config.status: creating src/Makefile
+config.status: creating src/libbsd.pc
+config.status: creating src/libbsd-ctor.pc
+config.status: creating src/libbsd-overlay.pc
+config.status: creating test/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+dh_testdir
+/usr/bin/make
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+/usr/bin/make  all-recursive
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+Making all in include
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+Making all in man
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+sed -e 's/mdX/md5/g' -e 's/mdY/md4/g' -e 's/MDX/MD5/g' mdX.3bsd > md5.3bsd
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+Making all in src
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+depbase=`echo arc4random.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT arc4random.lo -MD -MP -MF $depbase.Tpo -c -o arc4random.lo arc4random.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT arc4random.lo -MD -MP -MF .deps/arc4random.Tpo -c arc4random.c  -fPIC -DPIC -o .libs/arc4random.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT arc4random.lo -MD -MP -MF .deps/arc4random.Tpo -c arc4random.c -o arc4random.o >/dev/null 2>&1
+depbase=`echo arc4random_uniform.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT arc4random_uniform.lo -MD -MP -MF $depbase.Tpo -c -o arc4random_uniform.lo arc4random_uniform.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT arc4random_uniform.lo -MD -MP -MF .deps/arc4random_uniform.Tpo -c arc4random_uniform.c  -fPIC -DPIC -o .libs/arc4random_uniform.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT arc4random_uniform.lo -MD -MP -MF .deps/arc4random_uniform.Tpo -c arc4random_uniform.c -o arc4random_uniform.o >/dev/null 2>&1
+depbase=`echo bsd_getopt.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT bsd_getopt.lo -MD -MP -MF $depbase.Tpo -c -o bsd_getopt.lo bsd_getopt.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT bsd_getopt.lo -MD -MP -MF .deps/bsd_getopt.Tpo -c bsd_getopt.c  -fPIC -DPIC -o .libs/bsd_getopt.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT bsd_getopt.lo -MD -MP -MF .deps/bsd_getopt.Tpo -c bsd_getopt.c -o bsd_getopt.o >/dev/null 2>&1
+depbase=`echo closefrom.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT closefrom.lo -MD -MP -MF $depbase.Tpo -c -o closefrom.lo closefrom.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT closefrom.lo -MD -MP -MF .deps/closefrom.Tpo -c closefrom.c  -fPIC -DPIC -o .libs/closefrom.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT closefrom.lo -MD -MP -MF .deps/closefrom.Tpo -c closefrom.c -o closefrom.o >/dev/null 2>&1
+depbase=`echo dehumanize_number.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT dehumanize_number.lo -MD -MP -MF $depbase.Tpo -c -o dehumanize_number.lo dehumanize_number.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT dehumanize_number.lo -MD -MP -MF .deps/dehumanize_number.Tpo -c dehumanize_number.c  -fPIC -DPIC -o .libs/dehumanize_number.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT dehumanize_number.lo -MD -MP -MF .deps/dehumanize_number.Tpo -c dehumanize_number.c -o dehumanize_number.o >/dev/null 2>&1
+depbase=`echo err.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT err.lo -MD -MP -MF $depbase.Tpo -c -o err.lo err.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT err.lo -MD -MP -MF .deps/err.Tpo -c err.c  -fPIC -DPIC -o .libs/err.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT err.lo -MD -MP -MF .deps/err.Tpo -c err.c -o err.o >/dev/null 2>&1
+depbase=`echo expand_number.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT expand_number.lo -MD -MP -MF $depbase.Tpo -c -o expand_number.lo expand_number.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT expand_number.lo -MD -MP -MF .deps/expand_number.Tpo -c expand_number.c  -fPIC -DPIC -o .libs/expand_number.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT expand_number.lo -MD -MP -MF .deps/expand_number.Tpo -c expand_number.c -o expand_number.o >/dev/null 2>&1
+depbase=`echo explicit_bzero.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT explicit_bzero.lo -MD -MP -MF $depbase.Tpo -c -o explicit_bzero.lo explicit_bzero.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT explicit_bzero.lo -MD -MP -MF .deps/explicit_bzero.Tpo -c explicit_bzero.c  -fPIC -DPIC -o .libs/explicit_bzero.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT explicit_bzero.lo -MD -MP -MF .deps/explicit_bzero.Tpo -c explicit_bzero.c -o explicit_bzero.o >/dev/null 2>&1
+depbase=`echo fgetln.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fgetln.lo -MD -MP -MF $depbase.Tpo -c -o fgetln.lo fgetln.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fgetln.lo -MD -MP -MF .deps/fgetln.Tpo -c fgetln.c  -fPIC -DPIC -o .libs/fgetln.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fgetln.lo -MD -MP -MF .deps/fgetln.Tpo -c fgetln.c -o fgetln.o >/dev/null 2>&1
+depbase=`echo fgetwln.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fgetwln.lo -MD -MP -MF $depbase.Tpo -c -o fgetwln.lo fgetwln.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fgetwln.lo -MD -MP -MF .deps/fgetwln.Tpo -c fgetwln.c  -fPIC -DPIC -o .libs/fgetwln.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fgetwln.lo -MD -MP -MF .deps/fgetwln.Tpo -c fgetwln.c -o fgetwln.o >/dev/null 2>&1
+depbase=`echo flopen.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT flopen.lo -MD -MP -MF $depbase.Tpo -c -o flopen.lo flopen.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT flopen.lo -MD -MP -MF .deps/flopen.Tpo -c flopen.c  -fPIC -DPIC -o .libs/flopen.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT flopen.lo -MD -MP -MF .deps/flopen.Tpo -c flopen.c -o flopen.o >/dev/null 2>&1
+depbase=`echo fmtcheck.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fmtcheck.lo -MD -MP -MF $depbase.Tpo -c -o fmtcheck.lo fmtcheck.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fmtcheck.lo -MD -MP -MF .deps/fmtcheck.Tpo -c fmtcheck.c  -fPIC -DPIC -o .libs/fmtcheck.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fmtcheck.lo -MD -MP -MF .deps/fmtcheck.Tpo -c fmtcheck.c -o fmtcheck.o >/dev/null 2>&1
+depbase=`echo fparseln.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fparseln.lo -MD -MP -MF $depbase.Tpo -c -o fparseln.lo fparseln.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fparseln.lo -MD -MP -MF .deps/fparseln.Tpo -c fparseln.c  -fPIC -DPIC -o .libs/fparseln.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fparseln.lo -MD -MP -MF .deps/fparseln.Tpo -c fparseln.c -o fparseln.o >/dev/null 2>&1
+depbase=`echo fpurge.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fpurge.lo -MD -MP -MF $depbase.Tpo -c -o fpurge.lo fpurge.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fpurge.lo -MD -MP -MF .deps/fpurge.Tpo -c fpurge.c  -fPIC -DPIC -o .libs/fpurge.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT fpurge.lo -MD -MP -MF .deps/fpurge.Tpo -c fpurge.c -o fpurge.o >/dev/null 2>&1
+depbase=`echo funopen.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT funopen.lo -MD -MP -MF $depbase.Tpo -c -o funopen.lo funopen.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT funopen.lo -MD -MP -MF .deps/funopen.Tpo -c funopen.c  -fPIC -DPIC -o .libs/funopen.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT funopen.lo -MD -MP -MF .deps/funopen.Tpo -c funopen.c -o funopen.o >/dev/null 2>&1
+depbase=`echo getbsize.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getbsize.lo -MD -MP -MF $depbase.Tpo -c -o getbsize.lo getbsize.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getbsize.lo -MD -MP -MF .deps/getbsize.Tpo -c getbsize.c  -fPIC -DPIC -o .libs/getbsize.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getbsize.lo -MD -MP -MF .deps/getbsize.Tpo -c getbsize.c -o getbsize.o >/dev/null 2>&1
+depbase=`echo getpeereid.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getpeereid.lo -MD -MP -MF $depbase.Tpo -c -o getpeereid.lo getpeereid.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getpeereid.lo -MD -MP -MF .deps/getpeereid.Tpo -c getpeereid.c  -fPIC -DPIC -o .libs/getpeereid.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getpeereid.lo -MD -MP -MF .deps/getpeereid.Tpo -c getpeereid.c -o getpeereid.o >/dev/null 2>&1
+depbase=`echo hash/md5.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/md5.lo -MD -MP -MF $depbase.Tpo -c -o hash/md5.lo hash/md5.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/md5.lo -MD -MP -MF hash/.deps/md5.Tpo -c hash/md5.c  -fPIC -DPIC -o hash/.libs/md5.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/md5.lo -MD -MP -MF hash/.deps/md5.Tpo -c hash/md5.c -o hash/md5.o >/dev/null 2>&1
+/bin/mkdir -p hash
+sed -e 's:hashinc:md5.h:g' -e 's:HASH:MD5:g' hash/helper.c > hash/md5hl.c
+depbase=`echo hash/md5hl.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/md5hl.lo -MD -MP -MF $depbase.Tpo -c -o hash/md5hl.lo hash/md5hl.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/md5hl.lo -MD -MP -MF hash/.deps/md5hl.Tpo -c hash/md5hl.c  -fPIC -DPIC -o hash/.libs/md5hl.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/md5hl.lo -MD -MP -MF hash/.deps/md5hl.Tpo -c hash/md5hl.c -o hash/md5hl.o >/dev/null 2>&1
+depbase=`echo hash/sha512c.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/sha512c.lo -MD -MP -MF $depbase.Tpo -c -o hash/sha512c.lo hash/sha512c.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/sha512c.lo -MD -MP -MF hash/.deps/sha512c.Tpo -c hash/sha512c.c  -fPIC -DPIC -o hash/.libs/sha512c.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT hash/sha512c.lo -MD -MP -MF hash/.deps/sha512c.Tpo -c hash/sha512c.c -o hash/sha512c.o >/dev/null 2>&1
+depbase=`echo heapsort.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT heapsort.lo -MD -MP -MF $depbase.Tpo -c -o heapsort.lo heapsort.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT heapsort.lo -MD -MP -MF .deps/heapsort.Tpo -c heapsort.c  -fPIC -DPIC -o .libs/heapsort.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT heapsort.lo -MD -MP -MF .deps/heapsort.Tpo -c heapsort.c -o heapsort.o >/dev/null 2>&1
+depbase=`echo humanize_number.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT humanize_number.lo -MD -MP -MF $depbase.Tpo -c -o humanize_number.lo humanize_number.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT humanize_number.lo -MD -MP -MF .deps/humanize_number.Tpo -c humanize_number.c  -fPIC -DPIC -o .libs/humanize_number.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT humanize_number.lo -MD -MP -MF .deps/humanize_number.Tpo -c humanize_number.c -o humanize_number.o >/dev/null 2>&1
+depbase=`echo inet_net_pton.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT inet_net_pton.lo -MD -MP -MF $depbase.Tpo -c -o inet_net_pton.lo inet_net_pton.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT inet_net_pton.lo -MD -MP -MF .deps/inet_net_pton.Tpo -c inet_net_pton.c  -fPIC -DPIC -o .libs/inet_net_pton.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT inet_net_pton.lo -MD -MP -MF .deps/inet_net_pton.Tpo -c inet_net_pton.c -o inet_net_pton.o >/dev/null 2>&1
+depbase=`echo merge.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT merge.lo -MD -MP -MF $depbase.Tpo -c -o merge.lo merge.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT merge.lo -MD -MP -MF .deps/merge.Tpo -c merge.c  -fPIC -DPIC -o .libs/merge.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT merge.lo -MD -MP -MF .deps/merge.Tpo -c merge.c -o merge.o >/dev/null 2>&1
+depbase=`echo nlist.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT nlist.lo -MD -MP -MF $depbase.Tpo -c -o nlist.lo nlist.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT nlist.lo -MD -MP -MF .deps/nlist.Tpo -c nlist.c  -fPIC -DPIC -o .libs/nlist.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT nlist.lo -MD -MP -MF .deps/nlist.Tpo -c nlist.c -o nlist.o >/dev/null 2>&1
+depbase=`echo pidfile.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT pidfile.lo -MD -MP -MF $depbase.Tpo -c -o pidfile.lo pidfile.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT pidfile.lo -MD -MP -MF .deps/pidfile.Tpo -c pidfile.c  -fPIC -DPIC -o .libs/pidfile.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT pidfile.lo -MD -MP -MF .deps/pidfile.Tpo -c pidfile.c -o pidfile.o >/dev/null 2>&1
+depbase=`echo progname.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT progname.lo -MD -MP -MF $depbase.Tpo -c -o progname.lo progname.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT progname.lo -MD -MP -MF .deps/progname.Tpo -c progname.c  -fPIC -DPIC -o .libs/progname.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT progname.lo -MD -MP -MF .deps/progname.Tpo -c progname.c -o progname.o >/dev/null 2>&1
+depbase=`echo radixsort.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT radixsort.lo -MD -MP -MF $depbase.Tpo -c -o radixsort.lo radixsort.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT radixsort.lo -MD -MP -MF .deps/radixsort.Tpo -c radixsort.c  -fPIC -DPIC -o .libs/radixsort.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT radixsort.lo -MD -MP -MF .deps/radixsort.Tpo -c radixsort.c -o radixsort.o >/dev/null 2>&1
+depbase=`echo readpassphrase.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT readpassphrase.lo -MD -MP -MF $depbase.Tpo -c -o readpassphrase.lo readpassphrase.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT readpassphrase.lo -MD -MP -MF .deps/readpassphrase.Tpo -c readpassphrase.c  -fPIC -DPIC -o .libs/readpassphrase.o
+readpassphrase.c(119): warning #2218: result of call is not used
+  		(void)write(output, prompt, strlen(prompt));
+  		      ^
+
+readpassphrase.c(119): warning #2218: result of call is not used
+  		(void)write(output, prompt, strlen(prompt));
+  		^
+
+readpassphrase.c(138): warning #2218: result of call is not used
+  		(void)write(output, "\n", 1);
+  		      ^
+
+readpassphrase.c(138): warning #2218: result of call is not used
+  		(void)write(output, "\n", 1);
+  		^
+
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT readpassphrase.lo -MD -MP -MF .deps/readpassphrase.Tpo -c readpassphrase.c -o readpassphrase.o >/dev/null 2>&1
+depbase=`echo reallocarray.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT reallocarray.lo -MD -MP -MF $depbase.Tpo -c -o reallocarray.lo reallocarray.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT reallocarray.lo -MD -MP -MF .deps/reallocarray.Tpo -c reallocarray.c  -fPIC -DPIC -o .libs/reallocarray.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT reallocarray.lo -MD -MP -MF .deps/reallocarray.Tpo -c reallocarray.c -o reallocarray.o >/dev/null 2>&1
+depbase=`echo reallocf.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT reallocf.lo -MD -MP -MF $depbase.Tpo -c -o reallocf.lo reallocf.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT reallocf.lo -MD -MP -MF .deps/reallocf.Tpo -c reallocf.c  -fPIC -DPIC -o .libs/reallocf.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT reallocf.lo -MD -MP -MF .deps/reallocf.Tpo -c reallocf.c -o reallocf.o >/dev/null 2>&1
+depbase=`echo setmode.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT setmode.lo -MD -MP -MF $depbase.Tpo -c -o setmode.lo setmode.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT setmode.lo -MD -MP -MF .deps/setmode.Tpo -c setmode.c  -fPIC -DPIC -o .libs/setmode.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT setmode.lo -MD -MP -MF .deps/setmode.Tpo -c setmode.c -o setmode.o >/dev/null 2>&1
+depbase=`echo setproctitle.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT setproctitle.lo -MD -MP -MF $depbase.Tpo -c -o setproctitle.lo setproctitle.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT setproctitle.lo -MD -MP -MF .deps/setproctitle.Tpo -c setproctitle.c  -fPIC -DPIC -o .libs/setproctitle.o
+IPO: WARNING: File scope asm disables -ipo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT setproctitle.lo -MD -MP -MF .deps/setproctitle.Tpo -c setproctitle.c -o setproctitle.o >/dev/null 2>&1
+depbase=`echo strlcat.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strlcat.lo -MD -MP -MF $depbase.Tpo -c -o strlcat.lo strlcat.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strlcat.lo -MD -MP -MF .deps/strlcat.Tpo -c strlcat.c  -fPIC -DPIC -o .libs/strlcat.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strlcat.lo -MD -MP -MF .deps/strlcat.Tpo -c strlcat.c -o strlcat.o >/dev/null 2>&1
+depbase=`echo strlcpy.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strlcpy.lo -MD -MP -MF $depbase.Tpo -c -o strlcpy.lo strlcpy.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strlcpy.lo -MD -MP -MF .deps/strlcpy.Tpo -c strlcpy.c  -fPIC -DPIC -o .libs/strlcpy.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strlcpy.lo -MD -MP -MF .deps/strlcpy.Tpo -c strlcpy.c -o strlcpy.o >/dev/null 2>&1
+depbase=`echo stringlist.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT stringlist.lo -MD -MP -MF $depbase.Tpo -c -o stringlist.lo stringlist.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT stringlist.lo -MD -MP -MF .deps/stringlist.Tpo -c stringlist.c  -fPIC -DPIC -o .libs/stringlist.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT stringlist.lo -MD -MP -MF .deps/stringlist.Tpo -c stringlist.c -o stringlist.o >/dev/null 2>&1
+depbase=`echo strmode.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strmode.lo -MD -MP -MF $depbase.Tpo -c -o strmode.lo strmode.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strmode.lo -MD -MP -MF .deps/strmode.Tpo -c strmode.c  -fPIC -DPIC -o .libs/strmode.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strmode.lo -MD -MP -MF .deps/strmode.Tpo -c strmode.c -o strmode.o >/dev/null 2>&1
+depbase=`echo strnstr.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strnstr.lo -MD -MP -MF $depbase.Tpo -c -o strnstr.lo strnstr.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strnstr.lo -MD -MP -MF .deps/strnstr.Tpo -c strnstr.c  -fPIC -DPIC -o .libs/strnstr.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strnstr.lo -MD -MP -MF .deps/strnstr.Tpo -c strnstr.c -o strnstr.o >/dev/null 2>&1
+depbase=`echo strtoi.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtoi.lo -MD -MP -MF $depbase.Tpo -c -o strtoi.lo strtoi.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtoi.lo -MD -MP -MF .deps/strtoi.Tpo -c strtoi.c  -fPIC -DPIC -o .libs/strtoi.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtoi.lo -MD -MP -MF .deps/strtoi.Tpo -c strtoi.c -o strtoi.o >/dev/null 2>&1
+depbase=`echo strtonum.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtonum.lo -MD -MP -MF $depbase.Tpo -c -o strtonum.lo strtonum.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtonum.lo -MD -MP -MF .deps/strtonum.Tpo -c strtonum.c  -fPIC -DPIC -o .libs/strtonum.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtonum.lo -MD -MP -MF .deps/strtonum.Tpo -c strtonum.c -o strtonum.o >/dev/null 2>&1
+depbase=`echo strtou.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtou.lo -MD -MP -MF $depbase.Tpo -c -o strtou.lo strtou.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtou.lo -MD -MP -MF .deps/strtou.Tpo -c strtou.c  -fPIC -DPIC -o .libs/strtou.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT strtou.lo -MD -MP -MF .deps/strtou.Tpo -c strtou.c -o strtou.o >/dev/null 2>&1
+depbase=`echo timeconv.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT timeconv.lo -MD -MP -MF $depbase.Tpo -c -o timeconv.lo timeconv.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT timeconv.lo -MD -MP -MF .deps/timeconv.Tpo -c timeconv.c  -fPIC -DPIC -o .libs/timeconv.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT timeconv.lo -MD -MP -MF .deps/timeconv.Tpo -c timeconv.c -o timeconv.o >/dev/null 2>&1
+depbase=`echo unvis.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT unvis.lo -MD -MP -MF $depbase.Tpo -c -o unvis.lo unvis.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT unvis.lo -MD -MP -MF .deps/unvis.Tpo -c unvis.c  -fPIC -DPIC -o .libs/unvis.o
+In file included from unvis.c(42):
+../include/bsd/vis.h(104): warning #1224: #warning directive: "NetBSD added incompatible strnvis() and strnunvis(), please see <bsd/vis.h> for more detils."
+  #warning "NetBSD added incompatible strnvis() and strnunvis(), please see <bsd/vis.h> for more detils."
+   ^
+
+IPO: WARNING: File scope asm disables -ipo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT unvis.lo -MD -MP -MF .deps/unvis.Tpo -c unvis.c -o unvis.o >/dev/null 2>&1
+depbase=`echo vis.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT vis.lo -MD -MP -MF $depbase.Tpo -c -o vis.lo vis.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT vis.lo -MD -MP -MF .deps/vis.Tpo -c vis.c  -fPIC -DPIC -o .libs/vis.o
+In file included from vis.c(65):
+../include/bsd/vis.h(104): warning #1224: #warning directive: "NetBSD added incompatible strnvis() and strnunvis(), please see <bsd/vis.h> for more detils."
+  #warning "NetBSD added incompatible strnvis() and strnunvis(), please see <bsd/vis.h> for more detils."
+   ^
+
+IPO: WARNING: File scope asm disables -ipo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT vis.lo -MD -MP -MF .deps/vis.Tpo -c vis.c -o vis.o >/dev/null 2>&1
+depbase=`echo wcslcat.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT wcslcat.lo -MD -MP -MF $depbase.Tpo -c -o wcslcat.lo wcslcat.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT wcslcat.lo -MD -MP -MF .deps/wcslcat.Tpo -c wcslcat.c  -fPIC -DPIC -o .libs/wcslcat.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT wcslcat.lo -MD -MP -MF .deps/wcslcat.Tpo -c wcslcat.c -o wcslcat.o >/dev/null 2>&1
+depbase=`echo wcslcpy.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT wcslcpy.lo -MD -MP -MF $depbase.Tpo -c -o wcslcpy.lo wcslcpy.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT wcslcpy.lo -MD -MP -MF .deps/wcslcpy.Tpo -c wcslcpy.c  -fPIC -DPIC -o .libs/wcslcpy.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT wcslcpy.lo -MD -MP -MF .deps/wcslcpy.Tpo -c wcslcpy.c -o wcslcpy.o >/dev/null 2>&1
+depbase=`echo getentropy.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H   -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getentropy.lo -MD -MP -MF $depbase.Tpo -c -o getentropy.lo getentropy.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getentropy.lo -MD -MP -MF .deps/getentropy.Tpo -c getentropy.c  -fPIC -DPIC -o .libs/getentropy.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I.. -isystem ../include/bsd/ -include ../config.h -DLIBBSD_OVERLAY -DLIBBSD_DISABLE_DEPRECATED -D__REENTRANT -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -MT getentropy.lo -MD -MP -MF .deps/getentropy.Tpo -c getentropy.c -o getentropy.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=link icc  -Wall -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wl,--version-script=./libbsd.map -version-number 0:9:1 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o libbsd.la -rpath /usr/lib/x86_64-linux-gnu arc4random.lo arc4random_uniform.lo bsd_getopt.lo closefrom.lo dehumanize_number.lo err.lo expand_number.lo explicit_bzero.lo fgetln.lo fgetwln.lo flopen.lo fmtcheck.lo fparseln.lo fpurge.lo funopen.lo getbsize.lo getpeereid.lo hash/md5.lo hash/md5hl.lo hash/sha512c.lo heapsort.lo humanize_number.lo inet_net_pton.lo merge.lo nlist.lo pidfile.lo progname.lo radixsort.lo readpassphrase.lo reallocarray.lo reallocf.lo setmode.lo setproctitle.lo strlcat.lo strlcpy.lo stringlist.lo strmode.lo strnstr.lo strtoi.lo strtonum.lo strtou.lo timeconv.lo unvis.lo vis.lo wcslcat.lo wcslcpy.lo getentropy.lo -lrt 
+libtool: link: icc -shared  -fPIC -DPIC  .libs/arc4random.o .libs/arc4random_uniform.o .libs/bsd_getopt.o .libs/closefrom.o .libs/dehumanize_number.o .libs/err.o .libs/expand_number.o .libs/explicit_bzero.o .libs/fgetln.o .libs/fgetwln.o .libs/flopen.o .libs/fmtcheck.o .libs/fparseln.o .libs/fpurge.o .libs/funopen.o .libs/getbsize.o .libs/getpeereid.o hash/.libs/md5.o hash/.libs/md5hl.o hash/.libs/sha512c.o .libs/heapsort.o .libs/humanize_number.o .libs/inet_net_pton.o .libs/merge.o .libs/nlist.o .libs/pidfile.o .libs/progname.o .libs/radixsort.o .libs/readpassphrase.o .libs/reallocarray.o .libs/reallocf.o .libs/setmode.o .libs/setproctitle.o .libs/strlcat.o .libs/strlcpy.o .libs/stringlist.o .libs/strmode.o .libs/strnstr.o .libs/strtoi.o .libs/strtonum.o .libs/strtou.o .libs/timeconv.o .libs/unvis.o .libs/vis.o .libs/wcslcat.o .libs/wcslcpy.o .libs/getentropy.o   -lrt  -g -O2 -fstack-protector-strong -march=native -Wl,--version-script=./libbsd.map -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax   -Wl,-soname -Wl,libbsd.so.0 -o .libs/libbsd.so.0.9.1
+ipo: warning #11003: no IR in object file .libs/setproctitle.o; was the source file compiled with -ipo
+ipo: warning #11003: no IR in object file .libs/unvis.o; was the source file compiled with -ipo
+ipo: warning #11003: no IR in object file .libs/vis.o; was the source file compiled with -ipo
+libtool: link: (cd ".libs" && rm -f "libbsd.so.0" && ln -s "libbsd.so.0.9.1" "libbsd.so.0")
+libtool: link: (cd ".libs" && rm -f "libbsd.so" && ln -s "libbsd.so.0.9.1" "libbsd.so")
+libtool: link: xiar cru .libs/libbsd.a  arc4random.o arc4random_uniform.o bsd_getopt.o closefrom.o dehumanize_number.o err.o expand_number.o explicit_bzero.o fgetln.o fgetwln.o flopen.o fmtcheck.o fparseln.o fpurge.o funopen.o getbsize.o getpeereid.o hash/md5.o hash/md5hl.o hash/sha512c.o heapsort.o humanize_number.o inet_net_pton.o merge.o nlist.o pidfile.o progname.o radixsort.o readpassphrase.o reallocarray.o reallocf.o setmode.o setproctitle.o strlcat.o strlcpy.o stringlist.o strmode.o strnstr.o strtoi.o strtonum.o strtou.o timeconv.o unvis.o vis.o wcslcat.o wcslcpy.o getentropy.o
+xiar: executing 'ar'
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libbsd.a
+libtool: link: ( cd ".libs" && rm -f "libbsd.la" && ln -s "../libbsd.la" "libbsd.la" )
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+Making all in test
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+dh_testdir
+dh_testdir
+dh_testroot
+dh_prep
+dh_installdirs
+/usr/bin/make install DESTDIR=/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp \
+                runtimelibdir=/lib/x86_64-linux-gnu
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+Making install in include
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include/bsd/netinet'
+ /usr/bin/install -c -m 644  bsd/netinet/ip_icmp.h '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include/bsd/netinet'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include/bsd/sys'
+ /usr/bin/install -c -m 644  bsd/sys/bitstring.h bsd/sys/cdefs.h bsd/sys/endian.h bsd/sys/poll.h bsd/sys/queue.h bsd/sys/time.h bsd/sys/tree.h '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include/bsd/sys'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include/bsd'
+ /usr/bin/install -c -m 644  bsd/bitstring.h bsd/bsd.h bsd/err.h bsd/getopt.h bsd/inttypes.h bsd/libutil.h bsd/md5.h bsd/nlist.h bsd/readpassphrase.h bsd/stdio.h bsd/stdlib.h bsd/string.h bsd/stringlist.h bsd/timeconv.h bsd/unistd.h bsd/vis.h bsd/wchar.h '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/include/bsd'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/include'
+Making install in man
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 LIST_EMPTY.3bsd LIST_ENTRY.3bsd LIST_FIRST.3bsd LIST_FOREACH.3bsd LIST_FOREACH_FROM.3bsd LIST_FOREACH_FROM_SAFE.3bsd LIST_FOREACH_SAFE.3bsd LIST_HEAD.3bsd LIST_HEAD_INITIALIZER.3bsd LIST_INIT.3bsd LIST_INSERT_AFTER.3bsd LIST_INSERT_BEFORE.3bsd LIST_INSERT_HEAD.3bsd LIST_NEXT.3bsd LIST_PREV.3bsd LIST_REMOVE.3bsd LIST_SWAP.3bsd RB_EMPTY.3bsd RB_ENTRY.3bsd RB_FIND.3bsd RB_FOREACH.3bsd RB_FOREACH_REVERSE.3bsd RB_GENERATE.3bsd RB_GENERATE_STATIC.3bsd RB_HEAD.3bsd RB_INIT.3bsd RB_INITIALIZER.3bsd RB_INSERT.3bsd RB_LEFT.3bsd RB_MAX.3bsd RB_MIN.3bsd RB_NEXT.3bsd RB_NFIND.3bsd RB_PARENT.3bsd RB_PREV.3bsd RB_PROTOTYPE.3bsd RB_PROTOTYPE_STATIC.3bsd RB_REMOVE.3bsd RB_RIGHT.3bsd RB_ROOT.3bsd '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 SLIST_EMPTY.3bsd SLIST_ENTRY.3bsd SLIST_FIRST.3bsd SLIST_FOREACH.3bsd SLIST_FOREACH_FROM.3bsd SLIST_FOREACH_FROM_SAFE.3bsd SLIST_FOREACH_SAFE.3bsd SLIST_HEAD.3bsd SLIST_HEAD_INITIALIZER.3bsd SLIST_INIT.3bsd SLIST_INSERT_AFTER.3bsd SLIST_INSERT_HEAD.3bsd SLIST_NEXT.3bsd SLIST_REMOVE.3bsd SLIST_REMOVE_AFTER.3bsd SLIST_REMOVE_HEAD.3bsd SLIST_SWAP.3bsd SPLAY_EMPTY.3bsd SPLAY_ENTRY.3bsd SPLAY_FIND.3bsd SPLAY_FOREACH.3bsd SPLAY_GENERATE.3bsd SPLAY_HEAD.3bsd SPLAY_INIT.3bsd SPLAY_INITIALIZER.3bsd SPLAY_INSERT.3bsd SPLAY_LEFT.3bsd SPLAY_MAX.3bsd SPLAY_MIN.3bsd SPLAY_NEXT.3bsd SPLAY_PROTOTYPE.3bsd SPLAY_REMOVE.3bsd SPLAY_RIGHT.3bsd SPLAY_ROOT.3bsd STAILQ_CONCAT.3bsd STAILQ_EMPTY.3bsd STAILQ_ENTRY.3bsd STAILQ_FIRST.3bsd STAILQ_FOREACH.3bsd STAILQ_FOREACH_FROM.3bsd '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 STAILQ_FOREACH_FROM_SAFE.3bsd STAILQ_FOREACH_SAFE.3bsd STAILQ_HEAD.3bsd STAILQ_HEAD_INITIALIZER.3bsd STAILQ_INIT.3bsd STAILQ_INSERT_AFTER.3bsd STAILQ_INSERT_HEAD.3bsd STAILQ_INSERT_TAIL.3bsd STAILQ_LAST.3bsd STAILQ_NEXT.3bsd STAILQ_REMOVE.3bsd STAILQ_REMOVE_AFTER.3bsd STAILQ_REMOVE_HEAD.3bsd STAILQ_SWAP.3bsd TAILQ_CONCAT.3bsd TAILQ_EMPTY.3bsd TAILQ_ENTRY.3bsd TAILQ_FIRST.3bsd TAILQ_FOREACH.3bsd TAILQ_FOREACH_FROM.3bsd TAILQ_FOREACH_FROM_SAFE.3bsd TAILQ_FOREACH_REVERSE.3bsd TAILQ_FOREACH_REVERSE_FROM.3bsd TAILQ_FOREACH_REVERSE_FROM_SAFE.3bsd TAILQ_FOREACH_REVERSE_SAFE.3bsd TAILQ_FOREACH_SAFE.3bsd TAILQ_HEAD.3bsd TAILQ_HEAD_INITIALIZER.3bsd TAILQ_INIT.3bsd TAILQ_INSERT_AFTER.3bsd TAILQ_INSERT_BEFORE.3bsd TAILQ_INSERT_HEAD.3bsd TAILQ_INSERT_TAIL.3bsd TAILQ_LAST.3bsd TAILQ_NEXT.3bsd TAILQ_PREV.3bsd TAILQ_REMOVE.3bsd TAILQ_SWAP.3bsd TIMESPEC_TO_TIMEVAL.3bsd TIMEVAL_TO_TIMESPEC.3bsd '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 arc4random.3bsd arc4random_addrandom.3bsd arc4random_buf.3bsd arc4random_stir.3bsd arc4random_uniform.3bsd be16dec.3bsd be16enc.3bsd be32dec.3bsd be32enc.3bsd be64dec.3bsd be64enc.3bsd bit_alloc.3bsd bit_clear.3bsd bit_decl.3bsd bit_ffc.3bsd bit_ffs.3bsd bit_nclear.3bsd bit_nset.3bsd bit_set.3bsd bit_test.3bsd bitstr_size.3bsd bitstring.3bsd byteorder.3bsd closefrom.3bsd dehumanize_number.3bsd errc.3bsd expand_number.3bsd explicit_bzero.3bsd fgetln.3bsd fgetwln.3bsd flopen.3bsd fmtcheck.3bsd fparseln.3bsd fpurge.3bsd funopen.3bsd getbsize.3bsd getmode.3bsd getpeereid.3bsd getprogname.3bsd heapsort.3bsd '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 humanize_number.3bsd le16dec.3bsd le16enc.3bsd le32dec.3bsd le32enc.3bsd le64dec.3bsd le64enc.3bsd md5.3bsd mergesort.3bsd nlist.3bsd pidfile.3bsd pidfile_close.3bsd pidfile_open.3bsd pidfile_remove.3bsd pidfile_write.3bsd queue.3bsd radixsort.3bsd readpassphrase.3bsd reallocarray.3bsd reallocf.3bsd setmode.3bsd setproctitle.3bsd setproctitle_init.3bsd setprogname.3bsd sl_add.3bsd sl_delete.3bsd sl_find.3bsd sl_free.3bsd sl_init.3bsd sradixsort.3bsd stringlist.3bsd strlcat.3bsd strlcpy.3bsd strmode.3bsd strnstr.3bsd strnunvis.3bsd strnvis.3bsd strtoi.3bsd strtonum.3bsd strtou.3bsd '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 strunvis.3bsd strvis.3bsd strvisx.3bsd timeradd.3bsd timerclear.3bsd timercmp.3bsd timerisset.3bsd timersub.3bsd timespecadd.3bsd timespecclear.3bsd timespeccmp.3bsd timespecisset.3bsd timespecsub.3bsd timeval.3bsd tree.3bsd unvis.3bsd vis.3bsd wcslcat.3bsd wcslcpy.3bsd '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man3'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man7'
+ /usr/bin/install -c -m 644 libbsd.7 '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/share/man/man7'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/man'
+Making install in src
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libbsd.la '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/libbsd.so.0.9.1 /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.so.0.9.1
+libtool: install: (cd /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libbsd.so.0.9.1 libbsd.so.0 || { rm -f libbsd.so.0 && ln -s libbsd.so.0.9.1 libbsd.so.0; }; })
+libtool: install: (cd /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libbsd.so.0.9.1 libbsd.so || { rm -f libbsd.so && ln -s libbsd.so.0.9.1 libbsd.so; }; })
+libtool: install: /usr/bin/install -c .libs/libbsd.lai /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.la
+libtool: install: /usr/bin/install -c .libs/libbsd.a /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.a
+libtool: install: chmod 644 /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.a
+libtool: install: ranlib /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.a
+libtool: warning: remember to run 'libtool --finish /usr/lib/x86_64-linux-gnu'
+/usr/bin/make  install-exec-hook
+make[4]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+if [ "/usr/lib/x86_64-linux-gnu" != "/lib/x86_64-linux-gnu" ]; then \
+	/bin/mkdir -p /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/lib/x86_64-linux-gnu; \
+	mv /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd*.so.* \
+	   /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/lib/x86_64-linux-gnu/; \
+	soname=`readlink /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.so`; \
+	sorelprefix=`echo /usr/lib/x86_64-linux-gnu | sed -r -e 's:(^/)?[^/]+:..:g'`; \
+	ln -sf $sorelprefix/lib/x86_64-linux-gnu/$soname \
+	       /dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libbsd.so; \
+fi
+make[4]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+ /usr/bin/install -c -m 644 libbsd.pc libbsd-overlay.pc '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/src'
+Making install in test
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev/test'
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libbsd-dev/libbsd-dev'
+dh_testdir
+dh_testroot
+dh_install
+dh_installchangelogs ChangeLog
+dh_installdocs
+dh_installman
+dh_installexamples
+dh_link
+dh_strip --dbgsym-migration='libbsd0-dbg (<< 0.8.1-1~)'
+dh_compress
+dh_fixperms
+dh_makeshlibs --add-udeb=libbsd0-udeb
+dh_installdeb
+dh_shlibdeps
+dpkg-shlibdeps: warning: symbol __dso_handle used by debian/libbsd0-udeb/lib/x86_64-linux-gnu/libbsd.so.0.9.1 found in none of the libraries
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libbsd0-udeb/lib/x86_64-linux-gnu/libbsd.so.0.9.1 was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: symbol __dso_handle used by debian/libbsd0/lib/x86_64-linux-gnu/libbsd.so.0.9.1 found in none of the libraries
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libbsd0/lib/x86_64-linux-gnu/libbsd.so.0.9.1 was not linked against libdl.so.2 (it uses none of the library's symbols)
+dh_gencontrol
+dh_md5sums
+dh_builddeb
+dpkg-deb: building package 'libbsd-dev' in '../libbsd-dev_0.9.1-1_amd64.deb'.
+dpkg-deb: building package 'libbsd0-dbgsym' in '../libbsd0-dbgsym_0.9.1-1_amd64.deb'.
+dpkg-deb: building package 'libbsd0' in '../libbsd0_0.9.1-1_amd64.deb'.
+dpkg-deb: building package 'libbsd0-udeb' in 'debian/.debhelper/scratch-space/build-libbsd0-udeb/libbsd0-udeb_0.9.1-1_amd64.deb'.
+	Renaming libbsd0-udeb_0.9.1-1_amd64.deb to libbsd0-udeb_0.9.1-1_amd64.udeb
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../libbsd_0.9.1-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian libbsd_0.9.1-1_amd64.changes ...
+W: libbsd-dev: manpage-has-errors-from-man usr/share/man/man3/errc.3bsd.gz  .Nx: Unknown NetBSD version `7.0' (#155)
+W: libbsd-dev: manpage-has-errors-from-man usr/share/man/man3/strtoi.3bsd.gz  .Nx: Unknown NetBSD version `7' (#231)
+W: libbsd-dev: manpage-has-errors-from-man usr/share/man/man3/strtonum.3bsd.gz  .Nx: Unknown NetBSD version `8' (#153)
+W: libbsd-dev: manpage-has-errors-from-man usr/share/man/man3/strtou.3bsd.gz  .Nx: Unknown NetBSD version `7' (#231)
+W: libbsd-dev: manpage-has-errors-from-man usr/share/man/man3/vis.3bsd.gz  .Nx: Unknown NetBSD version `7.0' (#558)
+Finished running lintian.

@@ -1,0 +1,15 @@
+Package: libbsd0-dbgsym
+Source: libbsd
+Version: 0.9.1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Guillem Jover <guillem@debian.org>
+Installed-Size: 81
+Depends: libbsd0 (= 0.9.1-1)
+Breaks: libbsd0-dbg (<< 0.8.1-1~)
+Replaces: libbsd0-dbg (<< 0.8.1-1~)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libbsd0
+Build-Ids: abed6c960c5945e7dfa52a42c4eb000c5ed979e7

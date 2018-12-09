@@ -1,0 +1,67 @@
+bsd_getopt.lo: bsd_getopt.c /usr/include/stdc-predef.h ../config.h \
+ ../include/bsd/getopt.h /usr/include/getopt.h /usr/include/features.h \
+ ../include/bsd/sys/cdefs.h /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/getopt_core.h \
+ /usr/include/bits/getopt_ext.h ../include/bsd/unistd.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /opt/intel/compilers_and_libraries_2019.1.144/linux/compiler/include/stddef.h \
+ /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
+ /usr/include/bits/unistd.h /usr/include/sys/stat.h \
+ /usr/include/bits/types/struct_timespec.h /usr/include/bits/types/time_t.h \
+ /usr/include/bits/stat.h
+
+/usr/include/stdc-predef.h:
+
+../config.h:
+
+../include/bsd/getopt.h:
+
+/usr/include/getopt.h:
+
+/usr/include/features.h:
+
+../include/bsd/sys/cdefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/getopt_core.h:
+
+/usr/include/bits/getopt_ext.h:
+
+../include/bsd/unistd.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/opt/intel/compilers_and_libraries_2019.1.144/linux/compiler/include/stddef.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/bits/getopt_posix.h:
+
+/usr/include/bits/unistd.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/bits/types/time_t.h:
+
+/usr/include/bits/stat.h:
